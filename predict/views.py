@@ -4,9 +4,7 @@ from rest_framework.views import APIView
 from ollama import chat
 from ollama import ChatResponse
 
-
 from predict.serializers import PredictionSerializer
-
 
 class PredictView(APIView):
     def post(self, request):
@@ -24,14 +22,7 @@ class PredictView(APIView):
             ],
             
         )
-        print(response["message"]["content"])
-        # or access fields directly from the response object
-        print(response.message.content)
-
-        # 
-
-        # prediction = ollama_model.predict(input_text)
-
+    
         return Response(
             {"prediction": response.message.content},
             status=status.HTTP_200_OK,
