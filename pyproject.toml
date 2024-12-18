@@ -1,0 +1,18 @@
+[project]
+name = "ml-with-django"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "django>=5.1.4",
+    "djangorestframework>=3.15.2",
+    "ollama>=0.4.4",
+    "psycopg2-binary>=2.9.10",
+    "python-decouple>=3.8",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.8.3",
+]
